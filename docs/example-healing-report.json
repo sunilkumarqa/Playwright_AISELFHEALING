@@ -1,0 +1,43 @@
+{
+  "testName": "self-healing/self-healing.spec.ts > Self-healing agent > changed locator is healed using a mocked AI response",
+  "project": "chromium",
+  "retry": 0,
+  "generatedAt": "2026-10-16T16:58:01.240Z",
+  "events": [
+    {
+      "testName": "self-healing/self-healing.spec.ts > Self-healing agent > changed locator is healed using a mocked AI response",
+      "timestamp": "2026-10-16T16:58:01.064Z",
+      "pageUrl": "http://self-healing.demo/login",
+      "action": "fill",
+      "intendedElement": "Username text input on the login form",
+      "originalLocator": "#username",
+      "originalError": "locator.fill: Timeout 1500ms exceeded.",
+      "replacementLocator": "page.getByTestId(\"login-user\")",
+      "recommendedLocatorDescription": "input Username",
+      "confidence": 0.97,
+      "validation": {
+        "passed": true,
+        "checks": {
+          "unique": true,
+          "visible": true,
+          "enabled": true,
+          "typeMatchesAction": true
+        },
+        "message": "All validation checks passed"
+      },
+      "provider": "mock",
+      "status": "healed",
+      "reason": "Candidate c1 matches \"Username text input on the login form\""
+    }
+  ],
+  "proposedLocatorChanges": [
+    {
+      "intendedElement": "Username text input on the login form",
+      "originalLocator": "#username",
+      "proposedLocator": "page.getByTestId(\"login-user\")",
+      "confidence": 0.97,
+      "pageUrl": "http://self-healing.demo/login",
+      "reviewNote": "Proposed by AI self-healing. Verify and update the Page Object manually; nothing was changed in source code."
+    }
+  ]
+}

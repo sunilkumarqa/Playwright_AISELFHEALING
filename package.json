@@ -1,0 +1,30 @@
+{
+  "name": "playwright_auto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:bdd": "cucumber-js",
+    "test:bdd:headed": "HEADLESS=false cucumber-js",
+    "test:bdd:smoke": "cucumber-js --tags @smoke",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "playwright test",
+    "test:healing": "playwright test tests/self-healing --project=chromium",
+    "test:healing:real": "AI_HEALING_REAL_TEST=true playwright test tests/self-healing/real-ai.spec.ts --project=chromium",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.3.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "openai": "^7.34.0",
+    "zod": "^4.6.7"
+  }
+}

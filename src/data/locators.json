@@ -1,0 +1,16 @@
+{
+  "loginPage": {
+    "usernameInput": "[data-test='username']",
+    "passwordInput": "[data-test='password']",
+    "loginButton": "[data-test='login-button']",
+    "errorMessage": "[data-test='error']",
+    "errorCloseButton": "[data-test='error-button']",
+    "loginLogo": ".login_logo"
+  },
+  "inventoryPage": {
+    "title": "[data-test='title']",
+    "inventoryList": "[data-test='inventory-list']",
+    "menuButton": "#react-burger-menu-btn",
+    "logoutLink": "[data-test='logout-sidebar-link']"
+  }
+}
